@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "app-animes"
+    }
+  },
+  "defaultProject": "app-animes",
+  "cli": {
+    "analytics": "137434f0-2ecc-4919-b345-23b2fcbd7362"
+  }
 }
