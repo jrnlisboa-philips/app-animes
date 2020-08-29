@@ -1,1 +1,26 @@
-<p>list-anime works!</p>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="animes" >
+      <tr *ngFor="let anime of animes"  >
+        <td> {{anime.title}} </td>
+        <td> {{anime.description}} </td>
+        <td> {{anime.category}} </td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button (click)="ver()"  type="button" class="btn btn-info">Ver</button>
+            <button (click)="update(anime.id)" type="button" class="btn btn-warning">Alterar</button>
+            <button type="button" class="btn btn-danger">Excluir</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

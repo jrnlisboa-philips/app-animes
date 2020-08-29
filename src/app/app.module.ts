@@ -15,6 +15,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
+import { UpdateAnimeComponent } from './update-anime/update-anime.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     DetailAnimeComponent,
     AlterAnimeComponent,
     DeleteAnimeComponent,
-    TopAnimeComponent
+    TopAnimeComponent,
+    UpdateAnimeComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     NgbModule,
 		AngularFireModule.initializeApp(environment.firebase),
 		AngularFirestoreModule,
-		AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

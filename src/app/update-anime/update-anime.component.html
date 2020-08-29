@@ -1,7 +1,7 @@
 <div class="container">
   <div class="">
 
-    <form>
+    <form *ngIf="anime"  >
       <div class="form-group">
         <label for="title">Título</label>
         <input [(ngModel)]="anime.title" name="title" type="text" class="form-control" id="title" aria-describedby="title">
@@ -14,8 +14,20 @@
         <label for="title">Categoria</label>
         <input [(ngModel)]="anime.category" name="category" type="text" class="form-control" id="category" aria-describedby="category">
       </div>
-      <button (click)="add()"  type="submit" class="btn btn-primary">Submit</button>
+      <div class="form-group form-check">
+        <input [(ngModel)]="anime.topAnime" name="topAnime" value="1" type="checkbox" class="form-check-input" id="topAnime">
+        <label class="form-check-label" for="topAnime">Top Anime</label>
+      </div>
+      <button (click)="update()"  type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+  </div>
+
+  <div id="mensagem" *ngIf="msg" >
+    <div class="card">
+      <div class="card-body">
+        {{msg}}
+      </div>
+    </div>
   </div>
 </div>

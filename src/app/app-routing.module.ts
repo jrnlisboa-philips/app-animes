@@ -1,3 +1,4 @@
+import { UpdateAnimeComponent } from './update-anime/update-anime.component';
 import { TopAnimeComponent } from './top-anime/top-anime.component';
 import { DeleteAnimeComponent } from './delete-anime/delete-anime.component';
 import { DetailAnimeComponent } from './detail-anime/detail-anime.component';
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'list', component: ListAnimeComponent},
   {path: 'inserir', component: AlterAnimeComponent},
-  {path: 'alter/:id', component: AlterAnimeComponent},
+  {path: 'update/:id', component: UpdateAnimeComponent},
   {path: 'detail/:id', component: DetailAnimeComponent},
   {path: 'delete/:id', component: DeleteAnimeComponent},
   {path: 'top/:id', component: TopAnimeComponent},
